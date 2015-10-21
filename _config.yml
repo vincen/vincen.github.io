@@ -2,10 +2,10 @@
 title: "楠柯一梦"
 email: vincen.gao@gmail.com
 description: "红豆生楠国，春来发几枝。愿君多采摘，此物最相思。"
-baseurl: "/favicons/mstile-310x310.png"
+baseurl: ""
 url: "http://fuqssi.com"
 title_description: "You know my loneliness is only kept for you, my sweet songs are only sung for you."
-title_image: "http://yun.baidu.com/share/link?shareid=669852145&uk=1678086187"
+title_image: "/favicons/mstile-310x310.png"
 # google_analytics: "UA-20365477-4"
 # disqus_account: cartenoire
 github_repository: https://vincen.github.io
