@@ -1,32 +1,15 @@
-# Site settings
-title: "楠柯一梦"
+markdown: rdiscount
+permalink: /:title/
+url: http://fuqssi.com
+#highlighter: pygments
+pygments: true
+name: 南柯一梦
+description: You know my loneliness is only kept for you, my sweet songs are only sung for you.
+author: vincen
 email: vincen.gao@gmail.com
-description: "红豆生楠国，春来发几枝。愿君多采摘，此物最相思。"
-baseurl: ""
-url: "http://fuqssi.com"
-title_description: "You know my loneliness is only kept for you, my sweet songs are only sung for you."
-title_image: "/favicons/mstile-310x310.png"
-# google_analytics: "UA-20365477-4"
-# disqus_account: cartenoire
-github_repository: https://vincen.github.io
-# addthis_id: ra-513c6fa83da6ec67
-post_limit: 5
-
-# Social usernames/URLs
-# twitter_username: _jacobtomlinson
-# github_username:  jacobtomlinson
-# linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
-# google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
-# stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
-
-# Footer
-# footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by Vincen Gao"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/vincen\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
-
-# Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-permalink: pretty
-exclude: [vendor]
+#duoshuo: niushuai
+#weibo: 1891858481
+#hub: niushuai
+safe: true
+paginate: 100
+about: "形相清癯，丰姿隽爽，萧疏轩举，湛然若神..."
