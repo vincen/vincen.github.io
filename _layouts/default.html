@@ -5,7 +5,7 @@
     <meta name="author" content="{{ site.author }}" />
     <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+    <!-- <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" /> -->
     <link rel="stylesheet" href="/media/css/style.css" />
     <link rel="stylesheet" href="/media/css/highlight.css" media="all"/>
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
@@ -21,9 +21,7 @@
           <span><a title="文章分类" class="" href="/categories/">分类</a></span>
           <span><a title="标签索引" class="" href="/tags/">标签</a></span>
           <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
-          <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
-          <span><a title="订阅本站" class="" href="/feed.xml">订阅</a></span>
-          <span><a title="关于站长" class="" href="/about/">关于</a></span>
+          <span><a title="关于作者" class="" href="/about/">关于</a></span>
         </nav>
         <article class="content">
           {{ content }}
@@ -32,7 +30,7 @@
 
       <footer>
         <p><small>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2004 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
+            <a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" title="许可协议">©</a> 2015 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
         </small></p>
       </footer>
 
