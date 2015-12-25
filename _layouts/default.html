@@ -8,6 +8,8 @@
     {% endif %}
     {% if page.tags %}
       <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
+    {% else %}
+      <meta name="keywords" content="{{ site.name }}" />
     {% endif %}
     <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
     <link rel="shortcut icon" href="/favicon.ico" />
