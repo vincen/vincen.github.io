@@ -1,8 +1,8 @@
 markdown: kramdown 
 permalink: /:title/
 url: http://fuqssi.com
-#highlighter: pygments
-pygments: true
+highlighter: rouge
+#pygments: true
 name: 南柯一梦
 description: You know my loneliness is only kept for you, my sweet songs are only sung for you.
 author: vincen
