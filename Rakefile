@@ -54,7 +54,11 @@ task :post do
   end
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    nty = File.join(SOURCE, "netty"),
+    filename = File.join(nty, "#{date}-#{slug}.#{CONFIG['post_ext']}")
+    if File.exist?(filename)
+      abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
   end
   
   puts "Creating new post: #{filename}"
