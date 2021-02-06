@@ -1,9 +1,4 @@
-###[vincen](http://github.com/vincen)
+### [vincen](http://github.com/vincen)
 
----
+Beginning with 2015-12-11.
 
-本博客运行于 [Jekyll](http://jekyllrb.com)
-
-vincen
-
-2015-12-11
