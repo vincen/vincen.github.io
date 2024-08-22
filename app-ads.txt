@@ -1,0 +1,102 @@
+yeahmobi.com, 32768, DIRECT
+yeahmobi.com, 32754, DIRECT
+yeahmobi.com, 38614, DIRECT
+yeahmobi.com, 37866, DIRECT
+yeahmobi.com, 37934, DIRECT
+yeahmobi.com, 37939, DIRECT
+yeahmobi.com, 39489, DIRECT
+zmaticoo.com, 32768, DIRECT
+zmaticoo.com, 32754, DIRECT
+zmaticoo.com, 38614, DIRECT
+zmaticoo.com, 37866, DIRECT
+zmaticoo.com, 37934, DIRECT
+zmaticoo.com, 37939, DIRECT
+zmaticoo.com, 39489, DIRECT
+rubiconproject.com,24362,RESELLER,0bfd66d529a55807
+rubiconproject.com,26156,RESELLER,0bfd66d529a55807
+rubiconproject.com,26158,RESELLER,0bfd66d529a55807
+freewheel.tv,1599106,RESELLER
+freewheel.tv,1599109,RESELLER
+admanmedia.com,990,RESELLER
+visiblemeasures.com,1020,RESELLER
+pubmatic.com,161136,RESELLER,5d62403b186f2ace
+smaato.com,1100051149,RESELLER,07bcf65f187117b4
+smaato.com,1100004890,RESELLER,07bcf65f187117b4
+conversantmedia.com,100455,RESELLER,03113cd04947736d
+smartadserver.com,4457,RESELLER,060d053dcf45cbf3
+sharethrough.com,DQQogebZ,RESELLER,d53b998a7bd4ecd2
+video.unrulymedia.com,158727213,RESELLER
+rubiconproject.com,15268,RESELLER,0bfd66d529a55807
+pubmatic.com,159277,RESELLER
+pubnative.net,1007475,RESELLER,d641df8625486a7b
+pubnative.net,1007303,RESELLER,d641df8625486a7b
+pubnative.net,1007311,RESELLER,d641df8625486a7b
+Contextweb.com,562762,RESELLER,89ff185a4c4e857c
+rubiconproject.com,25482,RESELLER,0bfd66d529a55807
+admixer.co.kr,1654,RESELLER
+admixer.co.kr,2018,RESELLER
+tpmn.io,663,RESELLER
+tpmn.io,664,RESELLER
+loopme.com,11605,RESELLER,6c8d5f95897a5a3b
+rubiconproject.com,23644,RESELLER,0bfd66d529a55807
+lijit.com,411121,RESELLER,fafdf38b16bf6b2b
+admanmedia.com,2050,RESELLER
+appnexus.com,6849,RESELLER
+xad.com,963,RESELLER,81cbf0a75a5e0e9a
+openx.com,543878511,RESELLER,6a698e2ec38604c6
+improvedigital.com,1699,RESELLER
+tvp.tv,AR40,RESELLER,1125b6434104a723
+adelement.com,36003,RESELLER
+adelement.com,36004,RESELLER
+xandr.com,13238,RESELLER,f5ab79cb980f11d1
+opera.com,pub5865193350528,RESELLER,55a0c5fd61378de3
+sonobi.com,a85c5f6129,RESELLER,d1a215d9eb5aee9e
+improvedigital.com,2276,RESELLER
+axonix.com,59089,RESELLER,bc385f2b4a87b721
+display.io,173162,RESELLER
+lijit.com,465542,RESELLER,fafdf38b16bf6b2b
+vidoomy.com,4930225,RESELLER
+mman.kr,33000,RESELLER
+betweendigital.com,44659,RESELLER
+hyperad.tech,172,RESELLER
+hyperad.tech,182,RESELLER
+google.com,pub-2843405949989126,DIRECT,f08c47fec0942fa0
+eskimi.com,2020000011,RESELLER
+video.unrulymedia.com,498216989,RESELLER
+smartyads.com,100064,RESELLER,fd2bde0ff2e62c5d
+vidoomy.com,8248728,RESELLER
+appnexus.com,12475,RESELLER,f5ab79cb980f11d1
+adform.com,2742,RESELLER
+yahoo.com,56860,RESELLER,e1a5b5b6e3255540
+criteo.com,B-063105,RESELLER,9fac4a4a87c2a44f
+adform.com,2671,RESELLER
+appnexus.com,15349,RESELLER,f5ab79cb980f11d1
+openx.com,540866936,RESELLER,6a698e2ec38604c6
+triplelift.com,12456,RESELLER,6c33edb13117fd86
+themediagrid.com,A8X5S7,RESELLER,35d5010d7789b49d
+sonobi.com,7b37f8ccbc,RESELLER,d1a215d9eb5aee9e
+axonix.com,57869,RESELLER
+zeta.com,757,RESELLER
+improvedigital.com,2316,RESELLER
+video.unrulymedia.com,3948367200,RESELLER
+onetag.com,7a579c11b7a0d25,DIRECT
+onetag.com,7a579c11b7a0d25-OB,DIRECT
+appnexus.com,13099,RESELLER
+videoheroes.tv,212663,RESELLER,064bc410192443d8
+pubnative.net,1009098,RESELLER,d641df8625486a7b
+pubnative.net,1006576,RESELLER,d641df8625486a7b
+pubnative.net,1009099,RESELLER,d641df8625486a7b
+sharethrough.com,XeKuhSkz,RESELLER,d53b998a7bd4ecd2a
+33across.com,0015a00002egvRSAAY,RESELLER,bbea06d9c4d2853c
+adyoulike.com,a2226c27fc2a6773f6a2b365e013513a,RESELLER
+pubmatic.com,165117,RESELLER,5d62403b186f2ace
+rubiconproject.com,25386,RESELLER,0bfd66d529a55807
+pubmatic.com,162974,RESELLER,5d62403b186f2ace
+zetaglobal.net,757,RESELLER
+risecodes.com,66bca72035bff70001caa46f,RESELLER
+sharethrough.com,bXzzb1bR,RESELLER,d53b998a7bd4ecd2
+xandr.com,15840,RESELLER
+rubiconproject.com,26292,RESELLER,0bfd66d529a55807
+lijit.com,503707,RESELLER,fafdf38b16bf6b2b
+pubmatic.com,164532,RESELLER,5d62403b186f2ace
+Media.net,8CU12AQ1Y,RESELLER
