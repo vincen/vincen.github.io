@@ -37,32 +37,9 @@
     <script src="https://cdn.amplitude.com/libs/analytics-browser-2.10.0-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.16-min.js.gz"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1})).promise.then(function() {window.amplitude.init('59c82ac0453e826fa939c989d2ca91a6', {"autocapture":{"elementInteractions":true}});});</script>
 
     <!-- bi sdk -->
-    <script>
-      function initSDK() {
-        window.fa = window.funsdata;
-        // 创建SDK配置对象
-        const config = {
-          // 产品id
-          appId: "13321",
-          // 线上
-          serverUrl: "https://deapi.funsdata.com/v1/sdk/report",
-          showLog: false,
-          mode: "debug",                                    // debug模式,
-          encrypt: false,                                   // 是否开启加密，默认false
-          persistence: 'localStorage',                      // 存储方式：localStorage或cookie
-          persistencePrefix: 'FunsDataJSSDK',               // 存储前缀
-          persistenceEnabled: true,                         // 是否启用存储
-          crossSubDomain: true,                             // 跨子域存储
-          autoTrack: {                                      // 自动追踪配置
-            pageShow: true,                                 // 是否自动追踪页面显示
-            pageHide: true                                  // 是否自动追踪页面隐藏
-          }
-        };
-        // 用配置对象初始化SDK
-        fa.init(config);
-      }
-    </script>
-    <script async onload="initSDK()" src="https://unpkg.com/@eclicktech/js-sdk@1.1.0/dist/umd.min.js"></script>
+    <script>function initSDK(){window.fa=window.funsdata;const config={appId:"13321",serverUrl:"https://deapi.funsdata.com/v1/sdk/report",showLog:false,mode:"debug",encrypt:false,persistence:'localStorage',persistencePrefix:'FunsDataJSSDK',persistenceEnabled:true,crossSubDomain:true,autoTrack:{pageShow:true,pageHide:true}};fa.init(config)}</script>
+    <script async onload="initSDK()"src="https://unpkg.com/@eclicktech/js-sdk@1.1.0/dist/umd.min.js"></script>
+
   </head>
   <body>
     <div id="container">
