@@ -27,7 +27,7 @@ layout: default
 <section class="post">
   {{ content }}
 </section>
-<section align="right">
+<section class="post-nav">
   <br/>
   <span>
     <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
@@ -35,4 +35,6 @@ layout: default
     <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
   </span>
 </section>
-<!-- {% include comments.md %} -->
+{% comment %}
+{% include comments.md %}
+{% endcomment %}

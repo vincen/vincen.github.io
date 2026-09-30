@@ -48,9 +48,9 @@ task :post do
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
-  rescue Exception => e
+  rescue ArgumentError
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
-    exit -1
+    exit 1
   end
   filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
@@ -58,7 +58,7 @@ task :post do
   end
   
   puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
+  File.open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
@@ -87,7 +87,7 @@ task :page do
   
   mkdir_p File.dirname(filename)
   puts "Creating new page: #{filename}"
-  open(filename, 'w') do |post|
+  File.open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
@@ -98,7 +98,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system("jekyll", "serve", "--watch")
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.
@@ -131,7 +131,7 @@ namespace :theme do
       next if non_layout_files.include?(File.basename(filename).downcase)
       puts "Generating '#{theme_name}' layout: #{File.basename(filename)}"
 
-      open(File.join(CONFIG['layouts'], File.basename(filename)), 'w') do |page|
+      File.open(File.join(CONFIG['layouts'], File.basename(filename)), 'w') do |page|
         if File.basename(filename, ".html").downcase == "default"
           page.puts "---"
           page.puts File.read(settings_file) if File.exist?(settings_file)
@@ -209,7 +209,7 @@ namespace :theme do
     puts "=> #{name} theme has been installed!"
     puts "=> ---"
     if ask("=> Want to switch themes now?", ['y', 'n']) == 'y'
-      system("rake switch_theme name='#{name}'")
+      system("rake", "switch_theme", "name=#{name}")
     end
   end
 
@@ -246,7 +246,7 @@ namespace :theme do
 
     ## Log packager version
     packager = {"packager" => {"version" => CONFIG["theme_package_version"].to_s } }
-    open(JB::Path.build(:theme_packages, :node => "#{name}/packager.yml"), "w") do |page|
+    File.open(JB::Path.build(:theme_packages, :node => "#{name}/packager.yml"), "w") do |page|
       page.puts packager.to_yaml
     end
     
@@ -264,7 +264,7 @@ end # end namespace :theme
 # Returns theme manifest hash
 def theme_from_git_url(url)
   tmp_path = JB::Path.build(:theme_packages, :node => "_tmp")
-  abort("rake aborted: system call to git clone failed") if !system("git clone #{url} #{tmp_path}")
+  abort("rake aborted: system call to git clone failed") unless system("git", "clone", "--", url.to_s, tmp_path)
   manifest = verify_manifest(tmp_path)
   new_path = JB::Path.build(:theme_packages, :node => manifest["name"])
   if File.exist?(new_path) && ask("=> #{new_path} theme package already exists. Override?", ['y', 'n']) == 'n'
@@ -282,12 +282,19 @@ end
 # theme_path - String, Required. File path to theme package.
 #        
 # Returns theme manifest hash
+def safe_yaml(content)
+  if YAML.method(:safe_load).parameters.any? { |_, name| name == :permitted_classes }
+    YAML.safe_load(content, permitted_classes: [], aliases: false)
+  else
+    YAML.safe_load(content, [], [], false)
+  end
+end
+
 def verify_manifest(theme_path)
   manifest_path = File.join(theme_path, "manifest.yml")
-  manifest_file = File.open( manifest_path )
-  abort("rake aborted: repo must contain valid manifest.yml") unless File.exist? manifest_file
-  manifest = YAML.load( manifest_file )
-  manifest_file.close
+  abort("rake aborted: repo must contain valid manifest.yml") unless File.exist?(manifest_path)
+  manifest = safe_yaml(File.read(manifest_path))
+  abort("rake aborted: repo must contain valid manifest.yml") unless manifest.is_a?(Hash)
   manifest
 end
 

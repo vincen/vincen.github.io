@@ -1,14 +1,3 @@
-/*------------------------------------
-* sext
-*
-* @author linghua.zhang@me.com
-* @link http://lhzhang.com/
-* @update 2011-12-20
-* 
-* |/ | (~ (~
-* |\.|._)._)
-* --------------------------------- */
-
 /*@import url(http://fonts.googleapis.com/css?family=Galdeano);
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
 @import url(http://fonts.googleapis.com/css?family=Cuprum);
@@ -17,7 +6,7 @@ body{font-size:14px;word-spacing:1px;
         margin-left:auto;
 margin-right:auto;
         font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;color:#2C3E50;}
-*{border:none;outline:none;}
+*{border:none;}
 a{color:#dd0000;text-decoration:none;}
 a:hover{color:#333333;text-decoration:underline;}
 hr{margin:.7em 0;border-top:1px dashed #d0d0d0;border-bottom:1px dashed #f9f9f9;}
@@ -35,7 +24,7 @@ blockquote p{margin:0;padding:.5em 0;}
 table { border-collapse:collapse; border-radius:10px;}
 td, th { padding:5px 10px; border:1px solid #886; background:#efefef; }
 #container{width:850px;margin:2em auto;display:block;padding:0 2em;}
-.content{font-size:16px;line-height:24px;}
+.content{font-size:16px;line-height:24px;overflow-wrap:break-word;}
 .content h1{padding:.5em 0;}
 .content img{max-width:640px;display:block;margin:4px auto;-webkit-box-shadow:#999 1px 1px 4px;-moz-box-shadow:#999 1px 1px 4px;box-shadow:#999 1px 1px 4px;}
 #tag_cloud{margin-bottom: 1em;}
@@ -49,6 +38,7 @@ td, th { padding:5px 10px; border:1px solid #886; background:#efefef; }
 .listing-item time{color:#999999;}
 .listing-seperator{font-weight:bold;}
 .meta{font-size:12px;color:#888;}
+.post-nav{text-align:right;}
 .pageNav{font-weight:bold;font-size:17px;}
 .pageNavInvalid{font-weight:bold;font-size:17px;color:#D0D0D0;}
 header{padding:.5em 0;border-bottom: 1px solid #cccccc;}
@@ -138,4 +128,25 @@ background: #ff0000;
 .paginator a:hover{
 color: white;
 background: #83BF73;
+}
+
+@media screen and (max-width: 960px) {
+  #container {
+    width: auto;
+    margin: 1em auto;
+    padding: 0 1em;
+  }
+  nav {
+    float: none;
+    margin: 0 0 1em;
+    width: auto;
+    text-align: left;
+  }
+  nav span {
+    display: inline-block;
+  }
+  .content img {
+    max-width: 100%;
+    height: auto;
+  }
 }

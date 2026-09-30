@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="author" content="{{ site.author }}" />
     {% if page.title %}
       <meta name="description" content="{{ page.title }}" />
     {% endif %}
 
-    <!-- 取消关键字，不让搜索引擎搜索 -->
-    <!-- {% if page.tags %}
-      <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
-    {% else %}
-      <meta name="keywords" content="{{ site.name }}" />
-    {% endif %} -->
-
     <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <!-- <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" /> -->
     <link rel="stylesheet" href="/media/css/style.css" />
     <link rel="stylesheet" href="/media/css/highlight.css" media="all"/>
-    <script type="text/javascript" src="/media/js/jquery-3.7.1.min.js"></script>
 
   </head>
   <body>
@@ -42,7 +35,7 @@
 
       <footer>
         <p><small>
-            <a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" title="许可协议">©</a> 2015 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
+            <a rel="license noopener noreferrer" href="https://www.apache.org/licenses/LICENSE-2.0.txt" target="_blank" title="许可协议">©</a> 2015 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
         </small></p>
       </footer>
     </div>

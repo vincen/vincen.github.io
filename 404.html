@@ -1,26 +1,43 @@
 ---
 title: 'Page Not Found...'
 layout: page
+permalink: /404.html
 ---
 
+<div id="not-found"></div>
 <script>
-	var posts =
-	{
-		{% for post in site.posts %} {% if post.thread %}
-		"{{ post.thread }}" : "{{ post.url }}",{% endif %}{% endfor %}
-	};
+(function () {
+  var posts = {
+    {% for post in site.posts %}{% if post.thread %}
+    {{ post.thread | jsonify }}: {{ post.url | jsonify }},{% endif %}{% endfor %}
+  };
 
-	var path = location.pathname;
-	if(path.charAt(path.length - 1) == '/') path = path.substring(0, path.length - 1);
-	var name = path.substring(path.lastIndexOf('/') + 1);
-	var url = posts[name];
-	if (url)
-	{
-		document.write("您访问的文章已经转移到新网址，正在为您转跳到 <a href=" + url + ">" + url + "</a>");
-		location.href = url;
-	}
-	else
-	{
-        document.write("<iframe scrolling='no' frameborder='0' src='/image/404.jpg' width='640' height='462' style='display:block;'></iframe>");
-	}
+  var path = location.pathname.replace(/\/+$/, "");
+  var name = path.substring(path.lastIndexOf("/") + 1);
+  var url = Object.prototype.hasOwnProperty.call(posts, name) ? posts[name] : "";
+  var box = document.getElementById("not-found");
+
+  if (isSafePath(url)) {
+    var note = document.createElement("p");
+    note.appendChild(document.createTextNode("您访问的文章已经转移到新网址，正在为您转跳到 "));
+    var link = document.createElement("a");
+    link.href = url;
+    link.textContent = url;
+    note.appendChild(link);
+    box.appendChild(note);
+    location.replace(url);
+    return;
+  }
+
+  var image = document.createElement("img");
+  image.src = "/image/404.jpg";
+  image.alt = "页面不存在";
+  image.width = 640;
+  image.height = 462;
+  box.appendChild(image);
+
+  function isSafePath(value) {
+    return typeof value === "string" && /^\/(?![/\\])[^\s\\]*$/.test(value);
+  }
+})();
 </script>
